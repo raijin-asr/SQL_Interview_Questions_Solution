@@ -1,0 +1,6 @@
+Task: Retrieve teams in the top 4 positions with more than 65 points and 50 goals.
+
+SQL query:
+SELECT team 
+FROM EPL
+WHERE points > 65 AND goals > 50 AND position <= 4

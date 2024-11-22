@@ -1,0 +1,8 @@
+Task: Write a query to retrieve the titles and the sale numbers of books published in the last decade (2010 - 2019) that have sold more than 1 million copies.
+
+SQL query:
+SELECT title, sales
+FROM Books
+WHERE date BETWEEN '2010%' AND '2019%'
+AND sales > 1000000
+
