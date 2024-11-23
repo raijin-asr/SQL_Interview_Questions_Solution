@@ -1,0 +1,6 @@
+Task: Retrieve the names of all employees who either belong to the Sales department or have a salary greater than 50000, but not both.
+
+SQL:
+SELECT name FROM Employees
+WHERE (department = "Sales" AND salary<50000)
+OR (department <> "Sales" AND salary>50000)

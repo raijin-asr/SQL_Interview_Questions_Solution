@@ -1,0 +1,6 @@
+Task: Retrieve the names of all employees who belong to the Sales department and have a salary greater than 50,000, ordered alphabetically by their names.
+
+SQL:
+SELECT name FROM Employees
+WHERE department = 'Sales' AND salary > 50000
+ORDER BY name
