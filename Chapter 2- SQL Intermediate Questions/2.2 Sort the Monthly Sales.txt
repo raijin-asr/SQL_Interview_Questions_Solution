@@ -1,0 +1,7 @@
+Task: Find the monthly sales from the above table and sort them in descending order of sales_amount and sales_date. Use the aliases month and total_sales for the result.
+
+SQL Code:
+SELECT strftime("%m", sales_date) AS month, SUM(sales_amount) AS total_sales
+FROM Sales
+GROUP BY month
+ORDER BY sales_amount DESC, sales_date DESC

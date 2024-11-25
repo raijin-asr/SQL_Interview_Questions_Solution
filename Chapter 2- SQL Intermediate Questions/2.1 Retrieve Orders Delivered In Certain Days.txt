@@ -1,0 +1,5 @@
+Task: Retrieve the number of orders that were delivered in exactly 3 days of the order date. Use the alias num_orders to return the count of the orders.
+
+SQL Code: 
+SELECT COUNT(*) AS num_orders FROM Orders 
+WHERE order_date = DATE(delivery_date, '-3 days')
