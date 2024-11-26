@@ -1,0 +1,9 @@
+Task: Retrieve the candidates suitable for a job in data science under the alias fit_candidate and sort the result in ascending order of candidate_id.
+
+Assumption: A candidate is suitable for the job if they are Good at both python and SQL.
+
+SQL:
+SELECT candidate_id, AS fit_candidate
+FROM Candidates
+WHERE python = 'Good' AND sql= 'Good'
+ORDER by candidate_id ASC
