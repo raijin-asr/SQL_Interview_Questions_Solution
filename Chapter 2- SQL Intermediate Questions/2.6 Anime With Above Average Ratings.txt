@@ -1,0 +1,7 @@
+Task: Retrieve the titles of all anime with seasons not equal to 20 and rating higher than the average rating.
+
+SQL:
+SELECT title
+FROM Anime
+WHERE seasons != 20 AND
+rating > (SELECT AVG(rating) FROM Anime)

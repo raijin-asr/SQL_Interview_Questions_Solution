@@ -1,0 +1,7 @@
+Task: Fetch movies with odd-numbered movie_id that is not Boring. Sort the resulting table by rating in descending order.
+
+SQL:
+SELECT title,rating
+FROM Movies
+WHERE description <> 'Boring' AND movie_id % 2 <> 0
+ORDER BY rating DESC

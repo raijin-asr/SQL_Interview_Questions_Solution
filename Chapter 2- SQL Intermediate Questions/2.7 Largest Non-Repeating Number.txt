@@ -1,0 +1,9 @@
+Task: Write an SQL query to fetch the largest non-repeating number. If there is no such number, fetch NULL.
+
+SQL:
+SELECT Max(number) as largest_single_number 
+FROM (
+SELECT COUNT(*) as count, number
+FROM Numbers
+GROUP by number
+HAVING count =1)

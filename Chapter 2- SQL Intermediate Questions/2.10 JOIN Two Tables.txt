@@ -1,0 +1,10 @@
+Task: Write an SQL query to display the total quantity of products ordered by each customer. Retrieve the customer ID and the total quantity of products grouped by each customer.
+
+Hint: Use INNER JOIN.
+
+SQL:
+SELECT o.customer_id, SUM(quantity) AS total_quantity
+FROM Orders AS o
+INNER JOIN Items AS i
+on o.order_id = i.order_id
+GROUP BY customer_id
