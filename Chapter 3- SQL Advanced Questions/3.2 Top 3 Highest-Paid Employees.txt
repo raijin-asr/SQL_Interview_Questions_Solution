@@ -1,0 +1,9 @@
+TASK: 
+Write an SQL query to retrieve the names of the top 3 highest-paid full-time employees in the Sales department with a salary greater than $5,000 and experience greater than or equal to 5 years. Order the result by their salary in descending order.
+
+SQL:
+SELECT name
+FROM Employees
+WHERE salary >5000 AND type = 'Full-Time' AND experience >=5
+ORDER by SALARY DESC
+LIMIT 3;

@@ -1,0 +1,10 @@
+TASK: 
+Write an SQL query to pivot the Student table into the Grade table. The new table should have the columns: student_id, english, math, and science.
+
+SQL:
+SELECT student_id,
+       MAX(CASE WHEN subject = 'English' THEN grade END) AS english,
+       MAX(CASE WHEN subject = 'Math' THEN grade END) AS math,
+       MAX(CASE WHEN subject = 'Science' THEN grade END) AS science
+FROM Students
+GROUP BY student_id;

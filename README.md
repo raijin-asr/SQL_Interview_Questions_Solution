@@ -7,3 +7,4 @@ Solution of Questions and Problems of SQL
     Day 3: Chapter 2 - SQL Intermediate Questions (Retrieve Orders Delivered in Certain days, sort monthly Sales)
     Day 4: Chapter 2 - SQL Intermediate Questions (Sort Candidates in Ascending Order, Books with Multiple Words But no 'Z", Movies with Duration greater than average)
     Day 5: Chapter 2 - SQL Intermediate Questions (Anime with Average rating, largest non-repeating numbers, interesting movies with odd numbered ids, daily active users, join two table)
+    Day 6: Chapter 2 - SQL Intermediate Questions (Delete Duplicate Rows from table, top 3 highest paid employees, pivot tables)
