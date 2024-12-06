@@ -1,0 +1,12 @@
+TASK:
+Write an SQL query to compute the moving average (as average_amount) of how much the customers paid in a seven days window (i.e., current day + 6 days before).
+
+Here, average_amount should be rounded to two decimal places.
+
+SQL:
+SELECT visited_on,
+       ROUND(AVG(amount) 
+	OVER(ORDER BY visited_on 
+	ROWS BETWEEN 6 PRECEDING AND CURRENT ROW),2) 
+AS average_amount
+FROM Customers;

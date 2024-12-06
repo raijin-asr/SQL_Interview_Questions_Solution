@@ -1,0 +1,8 @@
+TASK:
+Write an SQL query to fix the Users table so that only the first character is uppercase and the rest are lowercase. Display the resulting table.
+
+SQL:
+UPDATE Users
+SET name = UPPER(substr(name,1,1)) || LOWER(substr(name,2));
+
+SELECT * FROM  Users

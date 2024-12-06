@@ -1,0 +1,14 @@
+TASK:
+Write an SQL query to retrieve the customer_id, first_name, last_name, and a column called payment_status which should display:
+
+Paid if the total amount of payments for a customer is greater than or equal to 300.
+Unpaid if the total amount of payments for a customer is less than 300.
+
+SQL:
+SELECT c.customer_id, c.first_name, c.last_name, (CASE WHEN p.amount >= 300 THEN 'Paid' ELSE 'Unpaid' END) AS payment_status
+FROM Customers as c
+LEFT JOIN Orders as o
+ON c.customer_id= o.customer_id
+LEFT JOIN Payments as p
+ON o.order_id = p.order_id
+GROUP BY c.customer_id, c.first_name, c.last_name
