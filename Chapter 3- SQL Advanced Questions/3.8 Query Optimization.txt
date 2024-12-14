@@ -1,0 +1,30 @@
+TASK:
+Write an optimized query to find the top 3 products (sales_id) with the highest total sales amount for each month, in descending order of the months and the sales amount.
+
+SQL:
+WITH monthly_sales AS (
+  SELECT 
+    strftime('%Y-%m', sales_date) AS month,
+    sales_id,
+    SUM(sales_amount) AS total_sales_amount
+  FROM Sales
+  GROUP BY month, sales_id
+),
+ranked_sales AS (
+  SELECT
+    month,
+    sales_id,
+    total_sales_amount,
+    ROW_NUMBER() OVER (
+      PARTITION BY month
+      ORDER BY total_sales_amount DESC
+      ) AS rank
+  FROM monthly_sales
+)
+SELECT
+  month,
+  sales_id,
+  total_sales_amount
+FROM ranked_sales
+WHERE rank <= 3
+ORDER BY month DESC, total_sales_amount DESC;

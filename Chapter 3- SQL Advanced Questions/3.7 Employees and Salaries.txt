@@ -1,0 +1,16 @@
+TASK:
+Write an SQL query to retrieve the emp_id, first_name, last_name, and a column called salary_category which should display:
+
+High for salaries greater than or equal to 5000.
+Medium for salaries between 4000 and 4999.
+Low for salaries below 4000.
+
+SQL:
+SELECT e.emp_id, e.first_name, e.last_name, 
+    (SELECT 
+    CASE WHEN s.salary >=5000 THEN 'High' 
+         WHEN s.salary >4000 AND s.salary <5000 THEN 'Medium' 
+         WHEN s.salary <4000 THEN 'Low' END) AS salary_category
+FROM Employees as e
+JOIN Salaries as s
+ON e.emp_id= s.emp_id

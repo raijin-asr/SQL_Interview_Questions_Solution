@@ -1,0 +1,24 @@
+TASK:
+Write an SQL query to retrieve the fraction of players that logged in again on the day after they first logged in, rounded to 2 decimal places.
+
+Hint: You need to count the number of players logged in for at least two consecutive days starting from their first login date, then divide that number by the total number of players.
+
+SQL: (Hard Level)
+WITH first_login AS (
+  SELECT player_id, MIN(event_date) AS first_login_date
+  FROM Games
+  GROUP BY player_id
+),
+consecutive_logins AS (
+  SELECT player_id, COUNT(*) AS consecutive_days
+  FROM (
+    SELECT player_id, event_date,
+           DATE(event_date, '+1 day') AS next_day,
+     LEAD(event_date) OVER (PARTITION BY player_id ORDER BY event_date) AS next_login
+    FROM Games
+  ) 
+  WHERE next_day = next_login
+  GROUP BY player_id
+)
+SELECT ROUND(CAST(COUNT(DISTINCT player_id) AS REAL) / (SELECT COUNT(DISTINCT player_id) FROM Games), 2) AS login_fraction
+FROM consecutive_logins;
