@@ -10,4 +10,4 @@ Self-Solved Solution of Questions and Problems of SQL
     Day 6: Chapter 3 - SQL Advanced Questions (Delete Duplicate Rows from table, top 3 highest paid employees, pivot tables)
     Day 7: Chapter 3 - SQL Advanced Questions (Fix Names, Customer Payment in 7 days, JOIN three tables)
     Day 8: Chapter 3 - SQL Advanced Questions (Employees and Salary, Query Optimization, Gameplay Analysis, Highest rated episode)
-    Day 9: Chapter 4 - SQL Theory Quesitons
+    Day 9: Chapter 4 - SQL Theory Quesitons (Types of SQL statement, Difference between SQL and MySQL, SQL vs NoSQL)

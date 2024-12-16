@@ -1,0 +1,33 @@
+What are the different types of SQL Statements?
+There are five types of SQL statements:
+
+1. Data Manipulation Language (DML) Statements
+-SELECT: Retrieves data from one or more tables.
+-INSERT: Inserts new records into a table.
+-UPDATE: Modifies existing records in a table.
+-ELETE: Deletes records from a table.
+-ERGE: Performs an INSERT, UPDATE, or DELETE operation based on a condition.
+-PSERT: Inserts a record if it does not exist or updates it if it does.
+
+2. Data Definition Language (DDL) Statements
+-REATE: Creates a new database, table, view, index, or other database objects.
+-LTER: Modifies the structure of an existing database object.
+-ROP: Deletes a database object.
+-TUNCATE: Removes all records from a table.
+
+3. Data Control Language (DCL) Statements
+-GRANT: Grants privileges and permissions to database users.
+-REVOKE: Revokes previously granted privileges.
+-ANALYZE: Collects statistical information about index, cluster, and table.
+-AUDIT: Tracks the occurrence of a specific SQL statement or all SQL statements during the user sessions.
+
+4. Transaction Control Language (TCL) Statements
+-BEGIN TRANSACTION: Allows users to start a new transaction.
+-COMMIT: Saves the changes made in a transaction.
+-ROLLBACK: Reverts the changes made in a transaction.
+-SAVEPOINT: Sets a savepoint within a transaction, allowing partial rollback.
+
+5. Data Query Language (DQL) Statements:
+-SELECT: Retrieves data from one or more tables (also used in DML).
+
+SELECT: Retrieves data from one or more tables (also used in DML).

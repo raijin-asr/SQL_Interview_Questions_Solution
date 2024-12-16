@@ -1,0 +1,29 @@
+Q. How are SQL and NoSQL different?
+--There are two dominant approaches to managing data:
+
+1. SQL databases
+2. NoSQL databases
+
+--SQL databases store data in related tables of rows and columns. On the other hand, NoSQL databases store unstructured or semi-structured data such as documents and images.
+
+Primary differences between the two databases:
+
+SQL----
+--SQL stands for Structured Query Language.
+--They are relational databases with data stored in related tables of rows and columns.
+--They store highly structured and (ideally) normalized data.
+--They are ideal for structured data of small or medium size.
+--Operations like migrating the database or making structural changes are relatively easy as long as the developer possesses knowledge of the database components.
+--Performance can be boosted by upgrading the server hardware (vertical scaling).
+--Primarily used for business and transactional applications.
+--Examples of SQL DBMS include MySQL, Oracle, PostgreSQL, MS SQL Server, etc.
+
+NoSQL----
+--NoSQL stands for Not only SQL.
+--They are non-relational databases containing data stored in key-value pairs, graphs, or documents.
+--They store unstructured or semi-structured data.
+--They are ideal for vast datasets.
+--Migrating or making structural changes might be very difficult even if the developer possesses knowledge of the database components.
+--Performance can be boosted by adding new servers (horizontal scaling).
+--Primarily used for big data and social media applications.
+--Examples of NoSQL DBMS include MongoDB, Cassandra, Amazon DynamoDB, Bigtable, etc.
