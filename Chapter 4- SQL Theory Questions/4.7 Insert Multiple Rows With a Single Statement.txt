@@ -1,0 +1,17 @@
+Q. Is there a way to insert multiple rows into a table using a single SQL statement?
+A: Yes, SQL does provide ways to insert multiple rows into a table using a single SQL statement. We can use the UNION ALL statement for this task.
+
+Let us create a table named League with columns id and team and insert two rows using the UNION ALL operator with a single statement.
+
+SQL Code:
+-- create a table named League
+CREATE table League(id integer, team string);
+ 
+-- insert statement to insert data into the table
+INSERT INTO League (id, team)
+ 
+-- single statement to insert multiple rows
+SELECT 1, 'Manchester United' UNION ALL SELECT 2, 'Liverpool';
+ 
+-- retrieve the inserted rows
+SELECT * FROM League;

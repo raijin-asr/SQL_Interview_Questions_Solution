@@ -1,0 +1,42 @@
+Q. Is there a way to handle NULL values in SQL queries?
+A: Yes, there are four primary approaches to handling NULL values:
+
+1. Check Column for NULL
+-You can use the IS NULL (or IS NOT NULL) operator to check if a column value is NULL. For example,
+
+SQL Code:
+SELECT *
+FROM Customers
+WHERE last_name IS NULL;
+
+
+2. Return NULL After Comparison
+-Use the NULLIF() function to compare two expressions and return NULL if they are equal. Else, return the first expression.
+-For example, the query below displays those values of the last_name column that are not NULL.
+
+SQL Code:
+SELECT NULLIF(last_name, NULL) AS last_name
+FROM Customers;
+
+-Here, we have provided two arguments to the NULLIF() function: last_name and NULL. The function then compares the values of these two arguments.
+-If they are equal i.e., if last_name is equal to NULL, then NULLIF() returns a NULL value.
+-If they are not equal i.e., if last_name is not equal to NULL, then NULLIF() returns the first argument (the value in the last_name column).
+
+3. Replace NULL With Alternative Value
+-With the COALESCE() function, you can replace a NULL value with an alternative value.
+-For example, we can replace a NULL value with N/A for customers without a last name as shown below:
+
+SQL Code:
+SELECT COALESCE(last_name, 'N/A') AS last_name
+FROM Customers;
+
+4. Logically Handle NULL
+-Properly using the CASE statement can help you logically handle NULL values. For example,
+
+SQL Code:
+SELECT first_name,
+  CASE
+    WHEN last_name IS NULL THEN 'N/A'
+    ELSE last_name
+  END AS last_name
+FROM Customers;

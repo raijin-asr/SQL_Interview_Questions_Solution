@@ -1,0 +1,14 @@
+Q. How can you find the length of a string in SQL?
+A: We can use the LENGTH() function to find the length of a string.
+
+The LENGTH() function:
+--takes in one parameter (which is the column name with a string data type)
+--returns the number of characters in the given string parameter
+--returns 0 if the input string is empty
+--returns NULL if the input string is NULL
+
+SQL:
+SELECT title, LENGTH(title) AS title_length
+FROM Anime;
+
+The above query displays the anime titles and their respective character lengths with the alias title_length.

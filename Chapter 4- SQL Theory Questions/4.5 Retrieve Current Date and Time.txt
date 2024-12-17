@@ -1,0 +1,35 @@
+Q. How to retrieve the Current Date and Time in SQL?
+A: The exact SQL code to retrieve the current date and time differs according to the database system.
+
+But in all cases, you must use a date and time function. So, here are the date and time functions across database systems:
+
+MySQL
+-To retrieve the current date: SELECT CURDATE();
+-To retrieve the current time: SELECT CURTIME();
+-To retrieve both the current date and time: SELECT NOW();
+
+PostgreSQL
+-To retrieve the current date: SELECT CURRENT_DATE;
+-To retrieve the current time: SELECT CURRENT_TIME;
+-To retrieve both the current date and time: SELECT CURRENT_TIMESTAMP;
+
+SQL Server
+-To retrieve both the current date and time: SELECT GETDATE();
+
+Oracle
+-To retrieve both the current date and time: SELECT SYSDATE FROM DUAL;
+
+SQLite
+-To retrieve the current date: SELECT DATE('NOW');
+-To retrieve the current time: SELECT TIME('NOW');
+-To retrieve the current local time: SELECT TIME('NOW', 'LOCALTIME');
+-To retrieve both the current date and time: DATETIME('NOW');
+-To retrieve both the current date and local time: DATETIME('NOW', 'LOCALTIME');
+
+SQLite Code:
+SELECT 
+    DATE('NOW') as current_date_utc,
+    TIME('NOW') as current_time_utc,
+    TIME('NOW', 'LOCALTIME') as current_time_local,
+    DATETIME('NOW') as current_datetime_utc,
+    DATETIME('NOW','LOCALTIME') as current_datetime_local;
