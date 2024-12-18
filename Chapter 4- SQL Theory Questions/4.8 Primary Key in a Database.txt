@@ -1,0 +1,17 @@
+Q. What is a primary key in a database table?
+A: A primary key in a database is a column or a combination of columns uniquely identifying each record (row) in a table. It ensures the uniqueness and integrity of the data within the table.
+
+Consider the following table:
+Table - Movies
+
+movie_id	title	    category
+1	        AIR	        Documentary
+2	        The Mario	Comedy
+3	        The Count	  Adaptation
+
+In the above table, movie_id serves as the primary key for the Movies table as it uniquely identifies each movie title in the table. No two movie titles can have the same movie_id.
+
+From this example, we can deduce that Primary Keys have three main functions:
+1. Uniqueness: Each record in the table has a distinct primary key value to ensure that each row in the table is uniquely identifiable.
+2. Data Integrity: The primary key constraint ensures that each row must have a valid and non-null primary key value.
+3. Indexing: The primary key is often indexed by the database system, which improves the performance of data retrieval operations such as searching, joining, and sorting.

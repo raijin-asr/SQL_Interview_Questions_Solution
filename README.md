@@ -12,3 +12,4 @@ Self-Solved Solution of Questions and Problems of SQL
     Day 8: Chapter 3 - SQL Advanced Questions (Employees and Salary, Query Optimization, Gameplay Analysis, Highest rated episode)
     Day 9: Chapter 4 - SQL Theory Quesitons (Types of SQL statement, Difference between SQL and MySQL, SQL vs NoSQL)
     Day10: Chapter 4 - SQL Theory Quesitons (Length of String, Retrieve Current Date and Time, Handle Null Values, Insert Multiple Rows with single statement)
+    Day11: Chapter 4 - SQL Theory Quesitons (Primary key, Normalizations, JOINS, Delete vs Truncate vs Drop, Purpose of Group By clause)

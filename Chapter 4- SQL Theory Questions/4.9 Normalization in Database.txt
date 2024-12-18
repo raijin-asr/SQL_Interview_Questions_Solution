@@ -1,0 +1,10 @@
+Q. What is normalization in database design, and why is it important?
+A: Normalization refers to organizing and structuring data in a database to reduce redundancy and improve data integrity.
+
+Think of a database as a storage closet for your belongings.
+Normalization tidies up the closet by organizing your belongings into different compartments so there are no redundant items — your socks are in one compartment, and your hats are in another. As a result, the next time you want to find your black socks (let's suppose), you can find them without making a mess in your closet.
+
+There are three key reasons why normalization is crucial in database design:
+--Normalization saves storage space to ensure data consistency. It also eliminates conflicting and redundant data.
+--With normalization, you can enforce rules to enhance data accuracy and reliability. It also minimizes anomalies and inconsistencies.
+--Normalization enables more efficient querying and improves database performance. It allows for more straightforward database structure modification, updating, and expansion.

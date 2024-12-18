@@ -1,0 +1,16 @@
+Q. What are the differences between the various types of JOINs?
+--When using different types of JOINs on two tables, the outcome can vary depending on the specific JOIN operation employed.
+
+Here are the possible outcomes for common types of joins:
+
+a. Inner Join
+Returns only the matching records between the two tables based on the specified join condition. Non-matching rows are excluded.
+
+b. Left Join
+Retrieves all records from the left table and the matching records from the right table based on the join condition. NULL values are returned if no match is found in the right table.
+
+c. Right Join
+Retrieves all records from the right table and the matching records from the left table based on the join condition. NULL values are returned if no match is found in the left table.
+
+d. Full Outer Join
+Returns all records from both tables, including matching and non-matching records. NULL values are displayed for non-matching rows.
