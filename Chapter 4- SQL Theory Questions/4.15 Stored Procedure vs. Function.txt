@@ -1,0 +1,29 @@
+Q. How would you differentiate a stored procedure and a function in SQL?
+-In SQL, a stored procedure is a set of statement(s) that perform some defined actions.
+
+Stored procedures are thus similar to functions as they can perform specified operations when we call them.
+
+But we can differentiate between a stored procedure and a function.
+
+For instance, a function is designed to return a single value or a table of values.
+
+It takes input parameters and performs a specific computation or operation on those parameters, producing a result.
+
+Functions are often used for calculations, data transformations, or as part of queries to retrieve computed values. Stored procedures, on the other hand, are used as re-executable code blocks you can call whenever you need.
+
+Here's a table showing the difference between a stored procedure and a function:
+
+Aspect	            || Stored Procedure
+Purpose	            || Performs a sequence of operations on a database.
+Usage	            || Called explicitly, scheduled, or invoked by other objects.
+Arguments	        || May or may not take any argument(s).
+Return Value	    || Does not have a mandatory return value.
+Data Manipulation	|| Can manipulate data inside the database i.e., INSERT and UPDATE statements are allowed.
+
+
+Aspect	            || Function
+Purpose	            || Computes and returns a single value or a table of values.
+Usage	            || Used within SQL queries, such as in SELECT statements or computed columns.
+Arguments           || Must take at least one argument.
+Return Value        || Designed to return a value or a table of values.
+Data Manipulation	|| Cannot manipulate data inside the database i.e., INSERT and UPDATE statements aren't allowed.

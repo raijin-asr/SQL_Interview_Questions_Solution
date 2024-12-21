@@ -1,0 +1,52 @@
+Q. How are UNION and UNION ALL different in SQL?
+-While both UNION and UNION ALL are used to combine the results of multiple SELECT statements into a single result set, there is one key difference between the two.
+
+UNION removes duplicate rows from the combined result set. On the other hand, UNION ALL does not remove duplicate rows from the combined result set.
+
+Consider the following two tables:
+Table - Midlands
+
+team_id	name
+3	    Spurs
+4	    United
+5	    Liverpool
+
+Table - London
+
+team_id	name
+1	    Chelsea
+2	    Arsenal
+3	    Spurs   
+
+
+UNION
+SELECT team_id, name
+FROM London
+UNION
+SELECT team_id, name
+FROM Midlands;
+
+Output
+team_id	name
+1	    Chelsea
+2	    Arsenal
+3	    Spurs
+4	    United
+5	    Liverpool
+
+
+UNION ALL
+SELECT team_id, name
+FROM London
+UNION ALL 
+SELECT team_id, name
+FROM Midlands;
+
+Output(also duplicate)
+team_id	name
+1	    Chelsea
+2	    Arsenal
+3	    Spurs
+3	    Spurs
+4	    United
+5	    Liverpool

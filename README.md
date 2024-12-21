@@ -13,3 +13,4 @@ Self-Solved Solution of Questions and Problems of SQL
     Day 9: Chapter 4 - SQL Theory Quesitons (Types of SQL statement, Difference between SQL and MySQL, SQL vs NoSQL)
     Day10: Chapter 4 - SQL Theory Quesitons (Length of String, Retrieve Current Date and Time, Handle Null Values, Insert Multiple Rows with single statement)
     Day11: Chapter 4 - SQL Theory Quesitons (Primary key, Normalizations, JOINS, Delete vs Truncate vs Drop, Purpose of Group By clause)
+    Day12: Chapter 4 - SQL Theory Quesitons (UNION vs UNION ALL, Indexes in Database, Stored Procedure vs function, ACID properties)
