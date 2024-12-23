@@ -1,0 +1,65 @@
+Q. What is the purpose of ON DELETE CASCADE on a foreign key?
+-A foreign key is a column in a table that establishes a link to a primary key column in another table, creating a relationship between the two tables.
+
+When the ON DELETE CASCADE option is set on a foreign key, it ensures that when a referenced row in the parent table is deleted, all corresponding rows in the child table that rely on that reference are automatically deleted, maintaining referential integrity.
+
+Consider two tables, Anime and Episodes, where Episodes has a foreign key referencing the primary key of Anime.
+
+The purpose of ON DELETE CASCADE is to delete related episodes when an anime series is deleted automatically.
+
+-- create a table named Anime
+CREATE TABLE Anime (
+    series_id INT PRIMARY KEY,
+    series_name VARCHAR(50)
+);
+ 
+-- create a table named Episodes
+CREATE TABLE Episodes (
+    episode_id INT PRIMARY KEY,
+    series_id INT,
+    title VARCHAR(50),
+    FOREIGN KEY (series_id) REFERENCES Anime(series_id) ON DELETE CASCADE
+);
+
+In the above example, the Episodes table has a foreign key constraint on the series_id column that references the series_id column of the Anime table.
+
+The ON DELETE CASCADE option is specified, indicating that when an anime series is deleted from the Anime table, all corresponding rows in the Episodes table associated with that series will be automatically deleted.
+
+This ensures that the child table, Episodes, stays synchronized with the parent table, Anime, and prevents orphaned records in the child table when the referenced record in the parent table is deleted.
+
+For example, suppose we insert the following data into the tables:
+
+Table - Anime
+series_id	series_name
+1	        Dragon Ball
+2	        One Piece
+
+Table - Episodes
+episode_id	series_id	title
+1	    1	The Secret of the Dragon Balls
+2	    1	The Nimbus Cloud of Roshi
+3	    2	Enter the Great Swordsman! Pirate Hunter Roronoa Zoro!
+
+SELECT * FROM Anime;
+
+SELECT * FROM Episodes;
+
+So, if we delete the anime with series_id 1 from the Anime table, all related records with series_id 1 will be deleted from the Episodes table. The tables after deletion will be:
+
+Table - Anime
+series_id	series_name
+2	        One Piece
+
+Table - Episodes
+episode_id	series_id	title
+3	        2	        Enter the Great Swordsman! Pirate Hunter Roronoa Zoro!
+
+Let's execute the necessary SQL queries to demonstrate this fact:
+-- delete row with series_id 1 from Anime
+
+DELETE FROM Anime
+WHERE series_id = 1;
+ 
+-- display the final tables
+SELECT * FROM Anime;
+SELECT * FROM Episodes;

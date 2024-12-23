@@ -1,0 +1,18 @@
+Q. What is a subquery in SQL, and how is it different from a regular query?
+A subquery in SQL, also known as a nested query or inner query, is a query embedded within another query. It allows you to use the results of one query as a part of another query.
+
+The subquery is enclosed within parentheses and typically placed within the outer query's WHERE, HAVING, or FROM clause.
+
+Here are the main differences between a query and a subquery:
+
+Query	
+A regular query retrieves data from one or more tables and performs filtering, sorting, and other operations on the data.
+A regular query is executed independently and can be run separately to fetch data from the database.
+A regular query can operate on multiple tables or combines tables together to fetch data.
+A regular query can be used to nest various subqueries to solve more complex and intricate querying.
+
+Subquery
+A subquery is used as a component or part of another query to provide additional information.
+A subquery cannot be executed alone since it relies on the context of the outer query.
+A subquery is typically used to filter or retrieve a subset of data based on certain conditions or calculations performed within the subquery.
+Subqueries can be nested, meaning a subquery can contain another subquery within it.

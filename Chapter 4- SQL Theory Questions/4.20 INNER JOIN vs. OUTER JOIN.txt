@@ -1,0 +1,38 @@
+Q. What are the critical differences between INNER JOIN and OUTER JOIN?
+-The most critical difference between INNER JOIN and OUTER JOIN lies in the way they behave when there are unmatched rows between the joined tables.
+
+Note: OUTER JOIN is also known as FULL JOIN or FULL OUTER JOIN.
+
+INNER JOIN
+INNER JOIN returns only the matching rows from both tables based on the join condition.
+
+Unmatched rows from either table are excluded from the result set.
+
+Example
+SELECT Orders.order_id, Customers.customer_id 
+FROM Orders
+INNER JOIN Customers
+ON Orders.customer_id = Customers.customer_id;
+
+This query joins the Orders and Customers tables based on their common customer_id columns.
+
+Then, it retrieves the order_id and customer_id columns from the joined tables, selecting only those records that have matching customer_id values in both the Orders and Customers tables.
+
+OUTER JOIN
+OUTER JOIN returns all the matching and unmatched rows from both tables, even if there are no matches in the other table.
+
+Example
+SELECT Orders.order_id, Customers.customer_id
+FROM Orders
+OUTER JOIN Customers
+ON Orders.customer_id = Customers.customer_id; 
+
+This query performs an OUTER JOIN, returning all the values of order_id from Orders and customer_id from Customers.
+
+In the result set, unmatched columns will have NULL values.
+
+In other words, if there's an order given by a customer whose customer_id is not in the Customers table, their customer_id will be displayed as NULL.
+
+Similarly, if a customer in the Customers table has not given any orders, their order_id will be NULL.
+
+Note: Our compiler is based on SQLite, which doesn't support OUTER JOIN.
