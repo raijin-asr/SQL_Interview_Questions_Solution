@@ -1,0 +1,31 @@
+Q. An SQL trigger with its example.
+A: An SQL trigger is a code that automatically executes when a specific event occurs in a database management system, such as inserting, updating, or deleting data.
+
+For example, imagine you have a Students table in a school database. Whenever a new student is inserted into the table, you'll want to automatically generate a unique student ID.
+
+So, you can write an SQL trigger that executes automatically after every insert operation on the Students table.
+
+This code can generate a unique student ID based on predefined rules and automatically assign it to the newly inserted student data.
+
+Here's how you can create and use a trigger in MySQL:
+
+CREATE TRIGGER trg_generate_student_id
+BEFORE INSERT ON Students
+FOR EACH ROW
+BEGIN
+  DECLARE next_id INT;
+
+  -- Get the next available student ID
+  SELECT MAX(student_id) + 1 INTO next_id FROM Students;
+
+  -- If the table is empty, set the initial student ID to 1
+  IF next_id IS NULL THEN
+    SET next_id = 1;
+  END IF;
+
+  -- Set the generated student ID for the new student
+  SET NEW.student_id = next_id;
+END;
+
+
+Note: Triggers in SQL can have different syntax depending on the DBMS used.
