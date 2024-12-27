@@ -1,0 +1,8 @@
+Task: Retrieve the names of employees whose names start with S, belong to the Content department and have a salary greater than 20000.
+
+SQL:
+SELECT name 
+FROM Employees
+WHERE name LIKE "S%" 
+AND department = "Content" 
+AND salary > 20000

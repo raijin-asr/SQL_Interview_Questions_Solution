@@ -1,0 +1,7 @@
+Task: Retrieve all books published in the 21st century in descending order of their sales.
+
+SQL:
+SELECT * 
+FROM Books
+WHERE date  > '2000-01-01'
+ORDER BY sales DESC

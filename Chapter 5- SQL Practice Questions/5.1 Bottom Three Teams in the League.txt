@@ -1,0 +1,7 @@
+Task: Retrieve the bottom three teams in the league along with their goals and points in descending order of their positions
+
+SQL:
+SELECT team, goals, points
+FROM EPL
+ORDER BY points
+LIMIT 3

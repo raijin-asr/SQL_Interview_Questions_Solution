@@ -16,3 +16,4 @@ Self-Solved Solution of Questions and Problems of SQL
     Day12: Chapter 4 - SQL Theory Quesitons (UNION vs UNION ALL, Indexes in Database, Stored Procedure vs function, ACID properties)
     Day13: Chapter 4 - SQL Theory Quesitons (View and Table, HAVING clause, ON DELETE CASCADE, INNER JOIN vs OUTER JOIN, Subquery)
     Day14: Chapter 4 - SQL Theory Quesitons (Data Integrity, Foreign Keys and Data Integrity, SQL Triggers, Order of Execution)
+    Day15: Chapter 5 - SQL Practice Quesitons (Bottom Three Teams in League, Books in 21st Century, Employee Name start with S)
