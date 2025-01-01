@@ -1,0 +1,7 @@
+Task: Retrieve the names of all employees who've got e in the middle of their names in ascending order of their salaries.
+
+SQL:
+SELECT name
+FROM Employees
+WHERE name LIKE "%_e_%"
+ORDER BY salary

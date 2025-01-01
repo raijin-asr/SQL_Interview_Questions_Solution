@@ -1,0 +1,5 @@
+Task: Write an SQL query to fetch the smallest non-repeating number. If there is no such number, fetch NULL. Use the alias smallest_single_number
+
+SQL:
+SELECT min(DISTINCT number) as smallest_single_number
+FROM Numbers

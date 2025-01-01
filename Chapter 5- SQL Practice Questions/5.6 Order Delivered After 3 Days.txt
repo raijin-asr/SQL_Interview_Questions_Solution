@@ -1,0 +1,6 @@
+Task: Retrieve the number of orders that were delivered after 3 days of the order date. Use the alias num_orders to denote this number.
+
+SQL:
+SELECT COUNT(*) as num_orders
+FROM Orders
+WHERE delivery_date = date(order_date, '+3 day');
