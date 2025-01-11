@@ -18,3 +18,4 @@ Self-Solved Solution of Questions and Problems of SQL
     Day14: Chapter 4 - SQL Theory Quesitons (Data Integrity, Foreign Keys and Data Integrity, SQL Triggers, Order of Execution)
     Day15: Chapter 5 - SQL Practice Quesitons (Bottom Three Teams in League, Books in 21st Century, Employee Name start with S)
     Day16: Chapter 5 - SQL Practice Quesitons (Separate the viewship, Ascending Ordering, Order delivered after 3 days, smallest non repeating number)
+    Day17: Chapter 5 - SQL Practice Quesitons (Monthly Sales, Candidates Poor at Python and SQL, Books that contain Z on title, Highest Rated Anime Titles)

@@ -1,0 +1,6 @@
+Task: Retrieve the titles of all books published in the 21st century that contain the letter Z.
+
+SQL:
+SELECT title
+FROM BOOKS
+WHERE release_date > 2000 AND title LIKE "%Z%"

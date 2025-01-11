@@ -1,0 +1,8 @@
+Task: Find the candidates unsuitable for data science job under the unfit_candidate alias. They must be Poor at either python or SQL. Sort the output in ascending order of candidate_id
+
+SQL:
+SELECT candidate_id, 
+    (CASE WHEN python="Poor" OR SQL= "Poor" THEN Candidates.name  ELSE NULL END) as unfit_candidate
+    FROM Candidates
+    WHERE python = 'Poor' OR SQL = 'Poor'
+    ORDER BY candidate_id
