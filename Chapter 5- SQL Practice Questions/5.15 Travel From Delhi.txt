@@ -1,0 +1,6 @@
+Task: Retrieve the destination(s) you can reach from Delhi as from_delhi along with their distance.
+
+SQL:
+SELECT destination as from_delhi, distance
+FROM Travel
+WHERE source= "Delhi"

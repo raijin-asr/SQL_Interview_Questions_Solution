@@ -1,0 +1,6 @@
+Task: Fetch movies with even-numbered movie_id with the description Fantasy.
+
+SQL:
+SELECT  title, rating
+FROM Movies
+WHERE description = "Fantasy" AND movie_id%2==0

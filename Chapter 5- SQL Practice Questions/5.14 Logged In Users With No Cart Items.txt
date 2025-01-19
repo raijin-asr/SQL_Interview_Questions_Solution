@@ -1,0 +1,7 @@
+Task: Write an SQL query to find the number of distinct users who have logged in but haven't added any products to the cart.
+
+SQL:
+SELECT COUNT(DISTINCT user_id) AS logged_user_empty_cart 
+FROM Activity
+WHERE user_id = 
+    (SELECT user_id FROM Activity WHERE activity_type IN ("Login" ,"Add to Cart"))

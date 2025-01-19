@@ -1,0 +1,11 @@
+Task: Write an SQL query to find the users who haven't checked out a product.
+
+Hint: Retrieve users whose activity type isn't Checkout.
+
+SQL:
+SELECT DISTINCT user_id
+FROM Activity 
+WHERE user_id <>  
+    (SELECT user_id 
+    FROM Activity
+    WHERE activity_type = "Checkout" )
