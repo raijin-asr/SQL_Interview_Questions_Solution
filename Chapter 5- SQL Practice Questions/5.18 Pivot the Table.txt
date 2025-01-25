@@ -1,0 +1,35 @@
+Input Table - Grades
+
+student_id	English	Math	Science 
+1		A+		C+	B
+2		B		C+	A
+
+Task: Pivot the above table to the following format:
+
+Expected Output
+Output Table - Students
+
+student_id	subject	grade
+1		English	A+
+1		Math		C+
+1		Science	B
+2		English	B
+2		Math		C+
+2		Science	A
+
+
+SQL:
+SELECT 
+    student_id, 
+    subject, 
+    CASE 
+        WHEN subject = 'English' THEN English
+        WHEN subject = 'Math' THEN Math
+        WHEN subject = 'Science' THEN Science
+    END AS grade
+FROM Grades
+CROSS JOIN (
+    SELECT 'English' AS subject UNION ALL
+    SELECT 'Math' AS subject UNION ALL
+    SELECT 'Science' AS subject
+) AS subjects;

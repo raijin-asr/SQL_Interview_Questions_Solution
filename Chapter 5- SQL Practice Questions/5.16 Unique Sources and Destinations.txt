@@ -1,0 +1,8 @@
+Task: Retrieve the unique sources and destinations from the table as unique_cities.
+
+SQL:
+SELECT DISTINCT source AS unique_cities 
+FROM Travel 
+UNION 
+SELECT DISTINCT destination 
+FROM Travel

@@ -1,0 +1,8 @@
+Task: Retrieve the lowest paid employee in the table with more than 5 years of experience.
+
+SQL:
+SELECT name
+FROM Employees
+WHERE experience > 5
+ORDER BY salary ASC
+LIMIT 1;
