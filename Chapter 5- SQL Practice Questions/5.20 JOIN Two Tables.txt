@@ -1,0 +1,9 @@
+Task: Retrieve the records of employees with a salary greater than 5000
+
+SQL:
+SELECT e.*, s.salary
+FROM Employees as e
+FULL JOIN
+Salaries as s
+ON e.emp_id = s.emp_id
+WHERE s.salary > 5000

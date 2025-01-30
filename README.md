@@ -21,3 +21,4 @@ Self-Solved Solution of Questions and Problems of SQL
     Day17: Chapter 5 - SQL Practice Quesitons (Monthly Sales, Candidates Poor at Python and SQL, Books that contain Z on title, Highest Rated Anime Titles)
     Day18: Chapter 5 - SQL Practice Quesitons (Retrieve Fantasy Movies, Users with no checkout, Logged in users with no cart items, Travel from Delhi)
     Day19: Chapter 5 - SQL Practice Quesitons (Unique sources and destinations, lowest paid employee, pivot table, convert all string to uppercase)
+    Day20: Chapter 5 - SQL Practice Quesitons (JOIN two table, LEFT JOIN, Shows Aired on different dates, highest number of games played, perfect square sales amout, median sales amount)
